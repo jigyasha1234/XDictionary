@@ -18,17 +18,11 @@ export default function App() {
 
   if (found) {
     setResult(
-      <div>
-        <h3>Definition:</h3>
         <p>{found.meaning}</p>
-      </div>
     );
   } else {
     setResult(
-      <div>
-        <h3>Definition:</h3>
         <p>Word not found in the dictionary.</p>
-      </div>
     );
   }
 };
@@ -49,6 +43,7 @@ export default function App() {
       </button>
 
       <div style={{ marginTop: "20px" }}>
+        <h3>Definition:</h3>
         {result}
       </div>
     </div>
