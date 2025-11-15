@@ -30,7 +30,7 @@ export default function App() {
 
   return (
     <div style={{ padding: "20px", fontFamily: "Arial" }}>
-      <h1>XDictionary</h1>
+      <h1>Dictionary App</h1>
 
       <input
         type="text"
