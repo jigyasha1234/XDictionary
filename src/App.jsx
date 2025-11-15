@@ -12,21 +12,26 @@ export default function App() {
   const [result, setResult] = useState("");
 
   const handleSearch = () => {
-    const found = dictionary.find(
-      (item) => item.word.toLowerCase() === searchTerm.trim().toLowerCase()
-    );
+  const found = dictionary.find(
+    (item) => item.word.toLowerCase() === searchTerm.trim().toLowerCase()
+  );
 
-    if (found) {
-      setResult(
-        <div>
-          <h3>Definition:</h3>
-          <p>{found.meaning}</p>
-        </div>
-      );
-    } else {
-      setResult("Word not found in the dictionary.");
-    }
-  };
+  if (found) {
+    setResult(
+      <div>
+        <h3>Definition:</h3>
+        <p>{found.meaning}</p>
+      </div>
+    );
+  } else {
+    setResult(
+      <div>
+        <h3>Definition:</h3>
+        <p>Word not found in the dictionary.</p>
+      </div>
+    );
+  }
+};
 
   return (
     <div style={{ padding: "20px", fontFamily: "Arial" }}>
